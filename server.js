@@ -41,7 +41,7 @@ app.post("/api/reservations", (req, res) => {
     // This works because of our body parsing middleware
     const newReservation = req.body;
 
-    if (currentReservation.length > 1) {
+    if (currentReservation.length > 5) {
         waitingList.push(newReservation)
     } else {
         currentReservation.push(newReservation)
